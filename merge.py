@@ -1,14 +1,13 @@
 from collections import defaultdict
 import os
-from  opencc import OpenCC
+from opencc import OpenCC
 from config import dandanplay, danmaku_box, danmaku
 from utils import get_comments_from_xml, save_d_to_file
 
-translate = OpenCC('t2s.json').convert
+translate = OpenCC("t2s.json").convert
 
 for filename in set(os.listdir(dandanplay)) & set(os.listdir(danmaku_box)):
     if filename.endswith(".xml"):
-
         print(filename)
         comments = []
         text_dict = defaultdict(set)
