@@ -1,7 +1,7 @@
 import os
 
 # 定义全局变量
-res_dir = "test_resource"
+res_dir = "."
 
 danmaku = os.path.join(res_dir, "danmaku")
 if not os.path.exists(danmaku):
